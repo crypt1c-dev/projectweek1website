@@ -19,7 +19,7 @@ Indien toch Firefox wordt gebruikt, is er waarschijnlijk geen probleem met posit
 
 Bij het gebruik van Google Chrome: Als je ziet dat de tekst erg is gekleefd aan de linkerkant van je scherm, en de afbeelding `Jens V.` of andere titels een beetje buiten beeld staan, volg dan volgende stappen:
 
-**1 |** Ga naar de code van `style.cs0s`.
+**1 |** Ga naar de code van `style.css`.
 
 **2 |** Hier ga je iets moeten aanpassen aan de code. Verwijder de regel `overflow-x: hidden;` in de body class:
 

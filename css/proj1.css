@@ -1,0 +1,126 @@
+/* 
+GLOBAL STYLES
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+p {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1em;
+}
+
+h2 {
+    font-family: "Red Hat Display", sans-serif;
+    color: #443DFF;
+    font-size: 2.5rem;
+}
+
+.h2_black {
+    color: #9794FF;
+}
+
+h3 {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #9794FF;
+}
+
+/*
+OVER MIJ
+*/
+#proj1 .container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    background-color: #22222200;
+    grid-template-columns: repeat(1, 1fr 1.5fr);
+    grid-template-areas:
+        "proj1img proj1";
+    align-items: center;
+    justify-self: center;
+    gap: 8rem;
+}
+
+#proj1 .container img {
+    position: fixed;
+    width: 25rem;
+    border-radius: 1.5rem;
+    margin-left: 3rem;
+}
+
+#proj1 .container .text {
+    display: grid;
+    width: 37.9375rem;
+    height: 25.875rem;
+    gap: 3rem;
+}
+
+#proj1 .container .text p {
+    font-size: 1.5rem;
+}
+
+#proj1 .container .text .button .btn .btninner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 2rem;
+    width: 13.5625rem;
+    margin: 2rem;
+    padding: 0.5rem 0.75rem;
+    justify-self: start;
+    align-items: center;
+    gap: 0.625rem;
+
+    color: #f5f5ff;
+    background-color: #443DFF;
+
+    border-radius: 1.5rem;
+}
+#proj1 .container .text .button .btn .btninner:hover {
+    transition: 0.5s;
+    background-color: #f5f5ff;
+    color: #443DFF;
+    border: 0.1rem solid #443DFF;
+}
+
+#proj1 .container .text .button .btn .btninner:hover svg path {
+    transition: 0.5s;
+    stroke: #443DFF;
+}
+
+
+#proj1 .container .text .button a {
+    text-decoration: none;
+}
+
+#proj1 .container .text .button .btn .btninner  {
+    text-decoration: none;
+    font-family: "Exo 2";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.03125rem;
+}
+
+#proj1 .container .text .button .btn .btninner svg {
+    justify-self: center;
+    width: 24px;
+    height: 24px;
+}

@@ -1,7 +1,7 @@
 
 # Readme Portfolio website projectweek.
 ## Waarom deze readme?
-Aangezien er niet gewerkt is met het responsive maken van de website, is de website enkel zichtbaar zoals gewenst wanneer het op specifieke zoom, resolutie,... wordt weergegeven. Hier enkele specificaties:
+Aangezien er bij het maken van de website niet expliciet gewerkt is aan het responsive maken van de website, is de website enkel zichtbaar zoals gewenst wanneer het op specifieke zoom, resolutie,... wordt weergegeven. Hier enkele specificaties:
 ## Specificaties
 ### resolutie
 Het beeldscherm waarop ik de website heb gemaakt heeft een resolutie van `2560 x 1600`. De schaal die ingesteld staat in de windows-instellingen staat aangeduid op `200%`

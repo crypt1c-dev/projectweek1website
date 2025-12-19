@@ -1,0 +1,894 @@
+/* 
+GLOBAL STYLES
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+p {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1em;
+}
+
+h2 {
+    font-family: "Red Hat Display", sans-serif;
+    color: #443DFF;
+    font-size: 2.5rem;
+}
+
+.h2_black {
+    color: #9794FF;
+}
+
+h3 {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #9794FF;
+}
+
+
+
+#home,
+#projecten,
+#blog,
+#contact {
+    background-color: #222222;
+}
+
+/*
+NAVIGATION
+*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 15vh;
+    grid-area:
+        "nav nav1";
+}
+
+.navlogo {
+    align-self: center;
+}
+
+.navlogo a {
+    grid-area: nav;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #F5F5FF;
+}
+
+.nav1 {
+    grid-area: nav1;
+}
+
+.nav1 a {
+    font-size: 1.5rem;
+}
+
+.nav1 a:hover {
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    text-decoration:underline;
+    color: #443DFF;
+}
+
+.navul {
+    justify-self: end;
+    align-self: center;
+}
+
+#nav {
+    position: relative;
+    z-index: 900;
+    width: 100vw;
+    height: 15vh;
+    background-color: #110E0E;
+    box-shadow: 0 14px 14.9px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F5F5FF;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#nav .container::after {
+    content: "";
+    bottom: -5px;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: #443DFF;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+#nav .container:hover::after {
+    transform: scaleX(1);
+}
+
+/* 
+HEADER 
+*/
+#home {
+    z-index: 400;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+}
+
+header {
+    background-color: #222222;
+    padding: 20px;
+    height: 100vh;
+
+    animation: header-bg-animation linear;
+    animation-timeline: view();
+    animation-range: exit -2rem;
+}
+
+.headertxt {
+    display: grid;
+    grid-template-columns: repeat(0);
+    justify-items: center;
+    align-content: center;
+    margin-top: -15vh;
+
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -15rem;
+}
+
+header h1 {
+    font-size: 6rem;
+    font-family: Orbitron, sans-serif;
+    background: #0B03A1;
+    background: linear-gradient(141deg, rgba(11, 3, 161, 1) 0%, rgba(68, 61, 255, 1) 25%);
+    color: transparent;
+    background-clip: text;
+}
+
+header h2 {
+    justify-self: center;
+}
+
+.headimg {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin-top: -15vh;
+}
+
+header img {
+    width: 80%;
+}
+
+/* Standaard button styles zijn hier ineens meegegeven */
+.button {
+    display: flex;
+    height: 1.5rem;
+    width: 12.7rem;
+    margin: 2rem;
+    padding: 0.5rem 0.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    border-radius: 1.5rem;
+    background: rgba(163, 164, 218, 0.30);
+}
+
+.button a {
+    text-decoration: none;
+    color: var(--Default-White, #FFF);
+    font-family: "Exo 2";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.03125rem;
+}
+
+#home .button:hover {
+    transition: 0.5s;
+    background-color: #F5F5FF;
+    box-shadow: 0rem 0rem 1rem #443DFF;
+}
+
+#home .button:hover svg path {
+    fill: #443DFF;
+}
+
+.button:hover a {
+    color: #443DFF;
+}
+
+.button svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* 
+MAIN PRIORITY
+*/
+main {
+    z-index: 700;
+}
+
+/*
+OVER MIJ
+*/
+#over-mij .container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    background-color: #22222200;
+    grid-template-columns: repeat(1, 1fr 1.5fr);
+    grid-template-areas:
+        "imgabout over-mij";
+    align-items: center;
+    justify-self: center;
+    gap: 8rem;
+
+    transform-origin: bottom;
+
+    animation: header-bg-animation2 linear;
+    animation-timeline: view();
+    animation-range: exit;
+
+}
+
+#over-mij .container img {
+    width: 20rem;
+    justify-self: end;
+
+    animation: fade-out2 linear;
+    animation-timeline: view();
+    animation-range: exit -15rem;
+}
+
+#over-mij .container .text {
+    display: grid;
+    width: 37.9375rem;
+    height: 25.875rem;
+    gap: 3.56rem;
+
+
+    animation: fade-out2 linear;
+    animation-timeline: view();
+    animation-range: exit -15rem;
+}
+
+#over-mij .container .text p {
+    font-size: 1.5rem;
+}
+
+
+
+/* 
+Projecten, blog LAYOUT
+*/
+#cbcontainer {
+    display: grid;
+    height: 300vh;
+    background-color: #222222;
+
+    animation: sectionanim linear;
+    animation-timeline: view();
+    animation-range: entry 10% 90%;
+
+    animation: header-bg-animation linear;
+    animation-timeline: view();
+    animation-range: exit -13rem;
+}
+
+/* 
+PROJECTEN
+*/
+#projecten {
+    display: inline-block;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #222222;
+
+
+}
+
+#projecten .projecten {
+    display: grid;
+    height: 41.0625rem;
+    width: 70.625rem;
+
+    margin-top: 6.62rem;
+    margin-left: 7.2rem;
+    gap: 3.3125rem;
+}
+
+#projecten #cardcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7.44rem;
+
+    align-items: center;
+}
+
+#projecten #cardcontainer .card {
+    width: 26rem;
+    height: 33.5rem;
+    border-radius: 1.25rem;
+    padding: 2rem;
+
+    background-color: #363636;
+}
+
+#projecten #cardcontainer .card:hover {
+    transition: 0.5s;
+    box-shadow: 0rem 0rem 1rem #443DFF;
+    scale: 1.025;
+}
+
+#projecten #cardcontainer .card .content {
+    display: grid;
+    grid-template-rows: 13.875rem 1fr;
+    width: 24rem;
+    height: 31.5rem;
+    align-items: center;
+    justify-self: center;
+    justify-items: center;
+
+    gap: 3rem;
+}
+
+#projecten #cardcontainer .card .content .contenttxt {
+    display: grid;
+    height: 8.5rem;
+    grid-template-rows: 3.25rem 3.25fr;
+
+    justify-items: center;
+
+    gap: 2rem;
+}
+
+#projecten #cardcontainer .card .content .contenttxt p {
+    color: #F5F5FF;
+    text-align: center;
+}
+
+#projecten #cardcontainer .card .content img {
+    width: 23.875rem;
+    height: 13.875rem;
+}
+
+#projecten #cardcontainer #arrow-right {
+    width: 1rem;
+    height: 2.3125rem;
+    cursor: not-allowed;
+}
+
+#projecten #cardcontainer #arrow-right {
+    content: "Niet beschikbaar";
+}
+
+#projecten #cardcontainer .card .content .button {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 1.5rem;
+    width: 9.5rem;
+    margin: 2rem;
+    padding: 0.5rem 0.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    background-color: #f5f5ff00;
+
+    border-radius: 1.5rem;
+    border: 2px solid #F5F5FF;
+}
+
+#projecten #cardcontainer .card .content .button a {
+    text-decoration: none;
+    font-family: "Exo 2";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.03125rem;
+}
+
+#projecten #cardcontainer .card .content .button svg {
+    justify-self: center;
+    width: 24px;
+    height: 24px;
+}
+
+#projecten #cardcontainer .card .content .button:hover {
+    transition: 0.5s;
+    background-color: #f5f5ff;
+    text-decoration: color;
+    box-shadow: 0rem 0rem 1rem #443DFF
+}
+
+#projecten #cardcontainer .card .content .button .btn a:hover {
+    transition: 0.5s;
+    color: #443DFF;
+}
+
+#projecten #cardcontainer .card .content .button:hover .svg path {
+    transition: 0.5s;
+    fill: #443DFF;
+}
+
+/* 
+BLOG
+*/
+#blog {
+    display: inline-block;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+#blog .blog {
+    display: grid;
+    height: 41.0625rem;
+    width: 70.625rem;
+
+    margin-top: 6.62rem;
+    margin-left: 7.2rem;
+    gap: 3.3125rem;
+
+}
+
+#blog #cardcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7.44rem;
+
+    align-items: center;
+}
+
+#blog #cardcontainer .card {
+    width: 26rem;
+    height: 33.5rem;
+    border-radius: 1.25rem;
+    padding: 2rem;
+
+    background-color: #363636;
+}
+
+#blog #cardcontainer .card:hover {
+    transition: 0.5s;
+    box-shadow: 0rem 0rem 1rem #443DFF;
+    scale: 1.025;
+}
+
+#blog #cardcontainer .card .content {
+    display: grid;
+    grid-template-rows: 13.875rem 1fr;
+    width: 24rem;
+    height: 31.5rem;
+    justify-self: center;
+    justify-items: center;
+}
+
+#blog #cardcontainer .card .content .contenttxt .post {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+#blog #cardcontainer .card .content .contenttxt .postdate {
+    color: white;
+    font-size: x-small;
+    justify-self: center;
+}
+
+#blog #cardcontainer .card .content .contenttxt {
+    display: grid;
+    height: 8.5rem;
+    grid-template-rows: 3.25rem 3.25fr;
+
+    justify-items: center;
+
+    gap: 2rem;
+}
+
+#blog #cardcontainer .card .content .contenttxt p {
+    color: #F5F5FF;
+    text-align: center;
+}
+
+#blog #cardcontainer .card .content img {
+    width: 24rem;
+    height: 9.875rem;
+}
+
+#blog #cardcontainer #arrow-right {
+    width: 1rem;
+    height: 2.3125rem;
+    cursor: not-allowed;
+}
+
+#blog #cardcontainer .card .content .button {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 1.5rem;
+    width: 9.5rem;
+    margin: 2rem;
+    padding: 0.5rem 0.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    background-color: #f5f5ff00;
+
+    border-radius: 1.5rem;
+    border: 2px solid #F5F5FF;
+}
+
+#blog #cardcontainer .card .content .button a {
+    text-decoration: none;
+    font-family: "Exo 2";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.03125rem;
+}
+
+#blog #cardcontainer .card .content .button svg {
+    justify-self: center;
+    width: 24px;
+    height: 24px;
+}
+
+
+/* 
+CV
+*/
+#cv .container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    background-color: #22222200;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "imgabout cv";
+    align-items: center;
+    justify-self: center;
+    justify-items: center;
+    gap: 8rem;
+
+    transform-origin: bottom;
+
+    animation: header-bg-animation2 linear;
+    animation-timeline: view();
+    animation-range: exit;
+
+}
+
+#cv .container img {
+    width: 21.75rem;
+    height: 24.875rem;
+    justify-self: end;
+
+    animation: fade-out2 linear;
+    animation-timeline: view();
+    animation-range: exit -15rem;
+}
+
+#cv .container .text {
+    display: grid;
+    width: 16.6rem;
+    height: 9.38;
+
+    justify-self: start;
+    justify-items: center;
+    align-self: center;
+
+    animation: fade-out2 linear;
+    animation-timeline: view();
+    animation-range: exit -15rem;
+}
+
+#cv .container .text p {
+    font-size: 1.5rem;
+}
+
+#cv .container .text .button .cvlink .btninner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 2rem;
+    width: 16.5625rem;
+    margin: 2rem;
+    padding: 0.5rem 0.75rem;
+    justify-self: start;
+    align-items: center;
+    gap: 0.625rem;
+
+    background-color: #443DFF;
+
+    border-radius: 1.5rem;
+}
+
+#cv .container .text .button .cvlink .btninner:hover {
+    transition: 0.5s;
+    background-color: #F5F5FF;
+    border: 0.1rem solid #443DFF;
+}
+
+#cv .container .text .button .cvlink .btninner:hover svg path {
+    transition: 0.5s;
+    fill: #443DFF;
+}
+
+#cv .container .text .button .cvlink .btninner {
+    text-decoration: none;
+    font-family: "Exo 2";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.03125rem;
+}
+
+#cv .container .text .button .cvlink .btninner svg {
+    justify-self: center;
+    width: 24px;
+    height: 24px;
+}
+
+
+/* 
+CONTACT
+*/
+#contact {
+    display: inline-block;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #222222;
+}
+
+#contact .contact {
+    display: grid;
+    height: 90.2vh;
+    width: 100vw;
+
+    justify-items: center;
+    margin-top: 9.8vh;
+}
+
+
+#contact .contact .container .contacttitle {
+    grid-area: contacttitle;
+    justify-items: center;
+}
+
+#contact .contact .container .contactdetails {
+    grid-area: contactdetails;
+}
+
+#contact .contact .container {
+    display: grid;
+    color: #F5F5FF;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+        "contacttitle"
+        "contactdetails"
+        "mapslocation";
+    gap: 3rem;
+}
+
+#contact .contact .container a {
+    color: #F5F5FF;
+    text-decoration: none;
+}
+
+#contact .contact .container .contactdetails {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+#contact .contact .container .contactdetails .mail {
+    display: grid;
+    width: 14.125rem;
+    grid-template-columns: 0fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    justify-self: center;
+    align-self: center;
+}
+
+#contact .contact .container .contactdetails .phone {
+    display: grid;
+    width: 14.125rem;
+    grid-template-columns: 0fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    justify-self: center;
+    align-items: center;
+}
+
+#contact .contact .container .contactdetails .location {
+    display: grid;
+    width: 14.125rem;
+    grid-template-columns: 0fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    justify-self: center;
+    align-items: center;
+}
+
+#contact .contact .container .contactdetails .mapslocation {
+    justify-self: center;
+    height: 120%;
+}
+
+#contact .contact .container .socials {
+    display: grid;
+    margin-top: 4rem;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#contact .contact .container .socials .arrow-top {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 1rem;
+    height: 2.3125rem;
+    align-self: start;
+    rotate: 270deg;
+    stroke-width: 8px;
+    stroke: #F5F5FF;
+}
+
+#contact .contact .container .socials .arrow-top span {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 1rem;
+    height: 2.3125rem;
+    justify-self: center;
+    rotate: 90deg;
+    stroke-width: 8px;
+    color: #F5F5FF;
+}
+
+#contact .contact .container .socials .instagram:hover .socialicon path {
+    transition-duration: 0.5s;
+    scale: 1.02;
+    border: 0.1rem #443DFF;
+    box-shadow: 0rem 0rem 1rem #443DFF;
+    fill: #443DFF;
+}
+
+#contact .contact .container .socials .twitch:hover .socialicon path {
+    transition-duration: 0.5s;
+    scale: 1.02;
+    border: 0.1rem #443DFF;
+    box-shadow: 0rem 0rem 1rem #443DFF;
+    fill: #443DFF;
+}
+
+#contact .contact .container .socials .tiktok:hover .socialicon path {
+    transition-duration: 0.5s;
+    scale: 1.02;
+    border: 0.1rem #443DFF;
+    box-shadow: 0rem 0rem 1rem #443DFF;
+    fill: #443DFF;
+}
+
+#contact .contact .container .socials .arrow-top:hover .svg .svgsvg path {
+    transition-duration: 0.5s;
+    scale: 1.02;
+    box-shadow: 0rem 0rem 1rem #443DFF;
+    stroke: #443DFF;
+}
+
+#contact .contact .container .socials .arrow-top .btt span:hover {
+    transition: 0.5;
+    scale: 1.2;
+}
+
+/*
+ANIMATIONS
+*/
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes header-bg-animation {
+    15% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+        scale: 2
+    }
+}
+
+@keyframes fade-out2 {
+
+    40%,
+    100%,
+    to {
+        transform: translateY(-30em);
+        opacity: 0;
+    }
+}
+
+@keyframes header-bg-animation2 {
+    20% {
+        opacity: 0;
+        background-color: #22222200;
+    }
+
+    40%,
+    100% {
+        opacity: 1;
+        background-color: #222222;
+    }
+}
+
+@keyframes sectionanim {
+    0% {
+        opacity: 1;
+        background-color: #F5F5FF;
+    }
+
+    70%,
+    100% {
+        opacity: 1;
+        background-color: #222222;
+    }
+}

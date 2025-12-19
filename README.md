@@ -40,3 +40,6 @@ body {
 
 ![Logo](https://i.imgur.com/r4sux2c.png)
 
+
+## Extra info
+De map `wireframe, ontwerp, feedback` bevat geen screenshot na de feedback aangezien Emma (mijn buddy van ook vorige projectweek) mij niet echt feedback heeft gegeven (zie screenshot feedback buddy.png).

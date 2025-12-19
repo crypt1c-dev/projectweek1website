@@ -67,12 +67,11 @@ NAVIGATION
     align-self: center;
 }
 
-.navlogo a {
+.navlogo a img {
     grid-area: nav;
     font-size: 1.5rem;
     margin-left: 1.5rem;
-    text-decoration: none;
-    color: #F5F5FF;
+    width: 20%;
 }
 
 .nav1 {

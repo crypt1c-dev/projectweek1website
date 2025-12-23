@@ -85,7 +85,7 @@ NAVIGATION
 .nav1 a:hover {
     transition: 0.5s;
     transition-timing-function: ease-in-out;
-    text-decoration:underline;
+    text-decoration: underline;
     color: #443DFF;
 }
 
@@ -134,6 +134,7 @@ nav ul li a {
     transition-timing-function: ease-in-out;
     transform: scaleX(0);
 }
+
 #nav .container:hover::after {
     transform: scaleX(1);
 }
@@ -305,7 +306,7 @@ Projecten, blog LAYOUT
 */
 #cbcontainer {
     display: grid;
-    height: 300vh;
+    height: 370vh;
     background-color: #222222;
 
     animation: sectionanim linear;
@@ -457,6 +458,89 @@ PROJECTEN
 }
 
 /* 
+WRAPPER
+*/
+
+.wrapper {
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 35vh;
+    margin-top: 6.62rem;
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+}
+
+.wrapper h2 {
+    margin-left: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+@keyframes scrollLeft {
+    to {
+        left: -200px;
+    }
+}
+
+.item {
+    display: grid;
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.itemimg {
+    max-width: 200px;
+    max-height: 100px;
+    justify-self: center;
+}
+
+.item1 {
+    background-color: transparent;
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+/* 
 BLOG
 */
 #blog {
@@ -471,7 +555,7 @@ BLOG
     height: 41.0625rem;
     width: 70.625rem;
 
-    margin-top: 6.62rem;
+
     margin-left: 7.2rem;
     gap: 3.3125rem;
 

@@ -356,6 +356,8 @@ PROJECTEN
     border-radius: 1.25rem;
     padding: 2rem;
 
+    text-align: center;
+
     background-color: #363636;
 }
 
@@ -395,6 +397,7 @@ PROJECTEN
 #projecten #cardcontainer .card .content img {
     width: 23.875rem;
     height: 13.875rem;
+    border-radius: 1.25rem;
 }
 
 #projecten #cardcontainer #arrow-right {

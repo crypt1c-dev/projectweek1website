@@ -508,7 +508,6 @@ WRAPPER
 }
 
 .item1 {
-    background-color: transparent;
     animation-delay: calc(30s / 8 * (8 - 1) * -1);
 }
 

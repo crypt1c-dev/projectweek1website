@@ -125,7 +125,7 @@ OVER MIJ
     height: 24px;
 }
 
-video {
+iframe {
     position: fixed;
     width: 25rem;
     border-radius: 1.5rem;

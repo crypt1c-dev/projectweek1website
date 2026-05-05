@@ -124,3 +124,10 @@ OVER MIJ
     width: 24px;
     height: 24px;
 }
+
+video {
+    position: fixed;
+    width: 25rem;
+    border-radius: 1.5rem;
+    margin-left: 3rem;
+}

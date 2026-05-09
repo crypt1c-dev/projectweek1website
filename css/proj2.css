@@ -131,3 +131,10 @@ iframe {
     border-radius: 1.5rem;
     margin-left: 3rem;
 }
+
+.left {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

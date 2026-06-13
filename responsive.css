@@ -3,17 +3,17 @@
 /* Large tablets */
 @media (max-width: 1024px) {
   h1 {
-    font-size: clamp(3rem, 8vw, 5rem) !important;
+    font-size: clamp(3rem, 8vw, 5rem);
   }
 
   h2 {
-    font-size: clamp(2rem, 4vw, 2.8rem) !important;
+    font-size: clamp(2rem, 4vw, 2.8rem);
   }
 
   #home {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
     text-align: center;
-    height: auto !important;
+    height: auto;
     min-height: 100vh;
     padding: 3rem 1rem;
   }
@@ -21,26 +21,26 @@
 
   .headertxt,
   .headimg {
-    margin-top: 0 !important;
+    margin-top: 0;
   }
 
   header img,
   .headimg img {
-    width: min(500px, 90vw) !important;
+    width: min(500px, 90vw);
   }
 
   .mainabout {
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: center;
   }
 
   #over-mij .container .text {
-    width: min(90vw, 700px) !important;
-    height: auto !important;
+    width: min(90vw, 700px);
+    height: auto;
   }
 
   .skill-main {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   #projecten,
@@ -53,23 +53,23 @@
   #blog #cardcontainer {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem !important;
+    gap: 2rem;
   }
 
   #projecten #cardcontainer .card {
-    width: min(420px, 90vw) !important;
-    height: auto !important;
+    width: min(420px, 90vw);
+    height: auto;
   }
 
   #projecten #cardcontainer .card .content,
   #blog .blog {
-    width: 100% !important;
+    width: 100%;
     height: auto;
   }
 
   #projecten #cardcontainer .card .content img {
-    width: 100% !important;
-    height: auto !important;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -81,7 +81,7 @@
   }
 
   #nav {
-    height: auto !important;
+    height: auto;
     padding: 1rem 0;
   }
 
@@ -97,15 +97,15 @@
   }
 
   .container {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: auto !important;
+    height: auto;
   }
 
   .navlogo a img {
-    width: 120px !important;
-    margin-left: 0 !important;
+    width: 120px;
+    margin-left: 0;
   }
 
   .navul {
@@ -116,24 +116,24 @@
   }
 
   nav ul li {
-    margin-right: 0 !important;
+    margin-right: 0;
   }
 
   nav ul li a {
-    font-size: .95rem !important;
+    font-size: .95rem;
   }
 
   h1 {
-    font-size: clamp(2.5rem, 12vw, 4rem) !important;
+    font-size: clamp(2.5rem, 12vw, 4rem);
   }
 
   h2 {
-    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+    font-size: clamp(1.5rem, 6vw, 2rem);
     text-align: center;
   }
 
   p {
-    font-size: 1rem !important;
+    font-size: 1rem;
     line-height: 1.6;
   }
 
@@ -144,8 +144,8 @@
   }
 
   .button {
-    width: min(280px, 85vw) !important;
-    margin: .75rem auto !important;
+    width: min(280px, 85vw);
+    margin: .75rem auto;
   }
 
   .mainabout {
@@ -162,21 +162,21 @@
   }
 
   #over-mij .container {
-    height: auto !important;
-    gap: 2rem !important;
+    height: auto;
+    gap: 2rem;
     padding: 2rem 1rem;
   }
 
   #over-mij .container img {
-    width: min(280px, 80vw) !important;
+    width: min(280px, 80vw);
   }
 
   #over-mij .container .text p {
-    font-size: 1rem !important;
+    font-size: 1rem;
   }
 
   .wrapper {
-    width: 100% !important;
+    width: 100%;
   }
 
   #projecten #cardcontainer {
@@ -208,11 +208,11 @@
   }
 
   #blog {
-    height: 275vh !important;
+    height: 275vh;
     justify-items: center;
   }
-  #blog .card {
-  }
+
+  #blog .card {}
 
   #cv .container {
     animation: header-bg-animation2 linear;
@@ -223,20 +223,20 @@
   /* Project detail pages */
   #proj1 .container,
   #proj2 .container {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
-    height: auto !important;
+    height: auto;
     padding: 2rem 1rem;
-    gap: 2rem !important;
+    gap: 2rem;
   }
 
   #proj1 .container img,
   #proj2 .container img,
   iframe {
-    position: static !important;
-    width: min(500px, 92vw) !important;
-    height: auto !important;
-    margin: 0 !important;
+    position: static;
+    width: min(500px, 92vw);
+    height: auto;
+    margin: 0;
   }
 
   iframe {
@@ -245,14 +245,14 @@
 
   #proj1 .container .text,
   #proj2 .container .text {
-    width: 100% !important;
-    height: auto !important;
-    gap: 1.5rem !important;
+    width: 100%;
+    height: auto;
+    gap: 1.5rem;
   }
 
   #proj1 .container .text p,
   #proj2 .container .text p {
-    font-size: 1rem !important;
+    font-size: 1rem;
   }
 
   footer {
@@ -271,17 +271,48 @@
 
 /* Small phones */
 @media (max-width: 480px) {
-  .card {
-    padding: 1rem !important;
+  #projecten #cardcontainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-self: flex-end;
+    width: 10vw;
+    gap: 3rem;
+    width: 100vw;
   }
 
-  .contenttxt {
-    height: auto !important;
+  #cardcontainer .card {
+    min-width: 50vw;
+    width: 50vw;
+    max-width: 50vw;
+    flex-shrink: 0;
+  }
+
+  #cardcontainer .card .content {
+    width: 100%;
+  }
+
+  #cardcontainer .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    justify-self: center;
+  }
+
+  #arrow-right {
+    right: 15px;
+  }
+
+  #blog {
+    height: 275vh;
+    justify-items: center;
   }
 
   .button,
   .btninner {
-    width: 100% !important;
+    width: 100%;
     max-width: 280px;
   }
 }

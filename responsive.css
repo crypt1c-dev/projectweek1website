@@ -1,10 +1,14 @@
-
 /* responsive.css - include AFTER your existing CSS files */
 
 /* Large tablets */
 @media (max-width: 1024px) {
-  h1 { font-size: clamp(3rem, 8vw, 5rem) !important; }
-  h2 { font-size: clamp(2rem, 4vw, 2.8rem) !important; }
+  h1 {
+    font-size: clamp(3rem, 8vw, 5rem) !important;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem) !important;
+  }
 
   #home {
     grid-template-columns: 1fr !important;
@@ -13,6 +17,7 @@
     min-height: 100vh;
     padding: 3rem 1rem;
   }
+
 
   .headertxt,
   .headimg {
@@ -80,6 +85,17 @@
     padding: 1rem 0;
   }
 
+  #home {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .headimg img {
+    width: 80%;
+    max-width: 350px;
+  }
+
   .container {
     display: flex !important;
     flex-direction: column;
@@ -132,6 +148,19 @@
     margin: .75rem auto !important;
   }
 
+  .mainabout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mainabout img {
+    width: 250px;
+  }
+
+  .mainabout .text {
+    width: 100%;
+  }
+
   #over-mij .container {
     height: auto !important;
     gap: 2rem !important;
@@ -148,6 +177,19 @@
 
   .wrapper {
     width: 100% !important;
+  }
+
+  #projecten #cardcontainer {
+    flex-wrap: nowrap;
+  }
+
+  .project-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  #arrow-right {
+    right: 15px;
   }
 
   /* Project detail pages */
@@ -183,6 +225,19 @@
   #proj1 .container .text p,
   #proj2 .container .text p {
     font-size: 1rem !important;
+  }
+
+  footer {
+    min-height: 200px;
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
   }
 }
 

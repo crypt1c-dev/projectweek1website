@@ -37,3 +37,57 @@ iframe {
     color: rgb(244, 244, 244);
     font-size: 2.5rem;
 }
+
+.go-back {
+    position: absolute;
+    align-self: flex-start;
+}
+
+.button .cvlink .btninner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 2rem;
+    width: 13.5625rem;
+    margin: 2rem;
+    padding: 0.5rem 0.75rem;
+    justify-self: start;
+    align-items: center;
+    gap: 0.625rem;
+
+    color: #f5f5ff;
+    background-color: #443DFF;
+
+    border-radius: 1.5rem;
+}
+
+.button .cvlink .btninner:hover {
+    transition: 0.5s;
+    background-color: #f5f5ff;
+    color: #443DFF;
+    border: 0.1rem solid #443DFF;
+}
+
+.button .cvlink .btninner:hover .svg path {
+    transition: 0.5s;
+    stroke: #443DFF;
+}
+
+.button a {
+    text-decoration: none;
+}
+
+.button .cvlink .btninner {
+    text-decoration: none;
+    font-family: "Exo 2";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.03125rem;
+}
+
+.button .cvlink .btninner svg {
+    justify-self: center;
+    width: 24px;
+    height: 24px;
+}

@@ -14,7 +14,7 @@ body {
     background-color: #f5f5f5;
     color: #333333;
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
 }
 
 p {
@@ -271,7 +271,8 @@ OVER MIJ
 #over-mij .container {
     display: flex;
     flex-direction: column;
-    height: 180vh;
+    min-height: 180vh;
+    height: auto;
     width: 100vw;
     background-color: #22222200;
 
@@ -339,14 +340,17 @@ OVER MIJ
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 }
+
 .skill-main .skill-bar .info {
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
 }
+
 .skill-bar .info .percent {
     font-weight: bold;
 }
+
 .skill-bar .bar {
     width: 100%;
     height: 10px;
@@ -354,6 +358,7 @@ OVER MIJ
     border-radius: 25px;
     margin-top: 5px;
 }
+
 .skill-bar .bar span {
     width: 36.5%;
     height: 1.6%;
@@ -361,22 +366,27 @@ OVER MIJ
     background-color: #443DFF;
     border-radius: 25px;
 }
+
 .skill-bar .bar .html {
     width: 25.55%;
     animation: html 3s;
 }
+
 .skill-bar .bar .css {
     width: 21.9%;
     animation: css 3s;
 }
+
 .skill-bar .bar .js {
     width: 18.98%;
     animation: js 3s;
 }
+
 .skill-bar .bar .csharp {
     width: 27.375%;
     animation: csharp 3s;
 }
+
 .skill-bar .bar .aprem {
     width: 29.2%;
     animation: aprem 3s;
@@ -392,38 +402,47 @@ OVER MIJ
     50% {
         width: 0;
     }
+
     100% {
         width: 25.55%;
     }
 }
+
 @keyframes css {
     50% {
         width: 0;
     }
+
     100% {
         width: 21.9%;
     }
 }
+
 @keyframes js {
     50% {
         width: 0;
     }
+
     100% {
         width: 18.98%;
     }
 }
+
 @keyframes csharp {
     50% {
         width: 0;
     }
+
     100% {
         width: 27.375%;
     }
 }
+
 @keyframes aprem {
     50% {
         width: 0;
     }
+
     100% {
         width: 29.2%;
     }
@@ -436,7 +455,8 @@ Projecten, blog LAYOUT
 */
 #cbcontainer {
     display: grid;
-    height: 370vh;
+    min-height: 370vh;
+    height: auto;
     background-color: #222222;
 
     animation: sectionanim linear;
@@ -453,7 +473,8 @@ PROJECTEN
 */
 #projecten {
     display: inline-block;
-    height: 120vh;
+    min-height: 120vh;
+    height: auto;
     width: 100vw;
 
     background-color: #222222;
@@ -707,6 +728,7 @@ WRAPPER
 .item8 {
     animation-delay: calc(30s / 9 * (9 - 8) * -1);
 }
+
 .item9 {
     animation-delay: calc(30s / 9 * (9 - 9) * -1);
 }
@@ -716,7 +738,8 @@ BLOG
 */
 #blog {
     display: inline-block;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100vw;
 }
 

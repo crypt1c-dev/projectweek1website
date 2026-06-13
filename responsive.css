@@ -1,0 +1,204 @@
+
+/* responsive.css - include AFTER your existing CSS files */
+
+/* Large tablets */
+@media (max-width: 1024px) {
+  h1 { font-size: clamp(3rem, 8vw, 5rem) !important; }
+  h2 { font-size: clamp(2rem, 4vw, 2.8rem) !important; }
+
+  #home {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    height: auto !important;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+  }
+
+  .headertxt,
+  .headimg {
+    margin-top: 0 !important;
+  }
+
+  header img,
+  .headimg img {
+    width: min(500px, 90vw) !important;
+  }
+
+  .mainabout {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  #over-mij .container .text {
+    width: min(90vw, 700px) !important;
+    height: auto !important;
+  }
+
+  .skill-main {
+    grid-template-columns: 1fr !important;
+  }
+
+  #projecten,
+  #blog,
+  #cbcontainer {
+    height: auto !important;
+  }
+
+  #projecten #cardcontainer,
+  #blog #cardcontainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem !important;
+  }
+
+  #projecten #cardcontainer .card {
+    width: min(420px, 90vw) !important;
+    height: auto !important;
+  }
+
+  #projecten #cardcontainer .card .content,
+  #blog .blog {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #projecten #cardcontainer .card .content img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+
+  body {
+    width: 100%;
+  }
+
+  #nav {
+    height: auto !important;
+    padding: 1rem 0;
+  }
+
+  .container {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto !important;
+  }
+
+  .navlogo a img {
+    width: 120px !important;
+    margin-left: 0 !important;
+  }
+
+  .navul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem;
+  }
+
+  nav ul li {
+    margin-right: 0 !important;
+  }
+
+  nav ul li a {
+    font-size: .95rem !important;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 12vw, 4rem) !important;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem !important;
+    line-height: 1.6;
+  }
+
+  .homepage-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    width: min(280px, 85vw) !important;
+    margin: .75rem auto !important;
+  }
+
+  #over-mij .container {
+    height: auto !important;
+    gap: 2rem !important;
+    padding: 2rem 1rem;
+  }
+
+  #over-mij .container img {
+    width: min(280px, 80vw) !important;
+  }
+
+  #over-mij .container .text p {
+    font-size: 1rem !important;
+  }
+
+  .wrapper {
+    width: 100% !important;
+  }
+
+  /* Project detail pages */
+  #proj1 .container,
+  #proj2 .container {
+    display: flex !important;
+    flex-direction: column;
+    height: auto !important;
+    padding: 2rem 1rem;
+    gap: 2rem !important;
+  }
+
+  #proj1 .container img,
+  #proj2 .container img,
+  iframe {
+    position: static !important;
+    width: min(500px, 92vw) !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  iframe {
+    aspect-ratio: 16 / 9;
+  }
+
+  #proj1 .container .text,
+  #proj2 .container .text {
+    width: 100% !important;
+    height: auto !important;
+    gap: 1.5rem !important;
+  }
+
+  #proj1 .container .text p,
+  #proj2 .container .text p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem !important;
+  }
+
+  .contenttxt {
+    height: auto !important;
+  }
+
+  .button,
+  .btninner {
+    width: 100% !important;
+    max-width: 280px;
+  }
+}

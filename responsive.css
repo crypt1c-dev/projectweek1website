@@ -46,7 +46,7 @@
   #projecten,
   #blog,
   #cbcontainer {
-    height: auto !important;
+    height: auto;
   }
 
   #projecten #cardcontainer,
@@ -64,7 +64,7 @@
   #projecten #cardcontainer .card .content,
   #blog .blog {
     width: 100% !important;
-    height: auto !important;
+    height: auto;
   }
 
   #projecten #cardcontainer .card .content img {
@@ -180,16 +180,44 @@
   }
 
   #projecten #cardcontainer {
+    display: flex;
     flex-wrap: nowrap;
+    width: 10vw;
+    gap: 0;
+    width: auto;
   }
 
-  .project-card {
-    min-width: 100%;
-    max-width: 100%;
+  #cardcontainer .card {
+    min-width: 50vw;
+    width: 50vw;
+    max-width: 50vw;
+    flex-shrink: 0;
+  }
+
+  #cardcontainer .card .content {
+    width: 100%;
+  }
+
+  #cardcontainer .card img {
+    width: 100%;
+    height: auto;
   }
 
   #arrow-right {
     right: 15px;
+  }
+
+  #blog {
+    height: 275vh !important;
+    justify-items: center;
+  }
+  #blog .card {
+  }
+
+  #cv .container {
+    animation: header-bg-animation2 linear;
+    animation-timeline: view();
+    animation-range: exit;
   }
 
   /* Project detail pages */
@@ -255,5 +283,18 @@
   .btninner {
     width: 100% !important;
     max-width: 280px;
+  }
+}
+
+@keyframes header-bg-animation2 {
+  20% {
+    opacity: 0;
+    background-color: #22222200;
+  }
+
+  80%,
+  100% {
+    opacity: 1;
+    background-color: #222222;
   }
 }

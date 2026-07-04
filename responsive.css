@@ -2,6 +2,11 @@
 
 @media (min-width: 2760px) {
 
+  .projcontainer {
+    align-items: flex-top;
+    width: 100vw;
+  }
+
   #arrow-right,
   #arrow-right2 {
     display: none;
@@ -12,6 +17,96 @@
 
   .projcontainer {
     align-items: flex-top;
+    width: 100vw;
+  }
+
+  #arrow-right,
+  #arrow-right2 {
+    display: none;
+  }
+}
+
+/* Tablet-landscape / small-to-mid desktop: rows of 2 cards instead of a horizontal carousel */
+@media (min-width: 1025px) and (max-width: 1920px) {
+
+  #projecten .projecten,
+  #blog .blog {
+    width: 100%;
+    max-width: 1160px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+
+  .carousel-wrapper,
+  .blog-carousel-wrapper {
+    left: 0;
+    width: 100%;
+    padding: 2rem 0;
+    overflow: visible;
+  }
+
+  .carousel-wrapper.has-overflow::after,
+  .blog-carousel-wrapper.has-overflow::after {
+    display: none;
+  }
+
+  .projcontainer {
+    width: 100%;
+  }
+
+  #projecten #cardcontainer,
+  #blog #cardcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 100%;
+    align-items: stretch;
+    /* JS still applies a carousel translateX; neutralize it since there's no carousel here */
+    transform: none !important;
+  }
+
+  /* No carousel here, so the arrows aren't needed */
+  #arrow-right,
+  #arrow-right2 {
+    display: none !important;
+  }
+
+  #projecten #cardcontainer .card,
+  #blog #cardcontainer .card {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  #projecten #cardcontainer .card .content,
+  #blog #cardcontainer .card .content {
+    width: 100%;
+    height: auto;
+  }
+
+  #projecten #cardcontainer .card .content .contenttxt,
+  #blog #cardcontainer .card .content .contenttxt {
+    height: auto;
+    grid-template-rows: auto;
+  }
+
+  #projecten #cardcontainer .card .content img,
+  #blog #cardcontainer .card .content img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  #projecten,
+  #blog {
+    height: auto;
+    min-height: auto;
+    padding: 4rem 0;
   }
 }
 
@@ -54,6 +149,12 @@
     height: auto;
   }
 
+  #skill-section {
+    width: 100%;
+    padding: 4rem 1.5rem;
+    box-sizing: border-box;
+  }
+
   .skill-main {
     grid-template-columns: 1fr;
   }
@@ -64,27 +165,145 @@
     height: auto;
   }
 
-  #projecten #cardcontainer,
-  #blog #cardcontainer {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+  /* --- Project & blog outer wrappers: stop forcing a fixed desktop width --- */
+  #projecten .projecten,
+  #blog .blog {
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
   }
 
-  #projecten #cardcontainer .card {
-    width: min(420px, 90vw);
+  .carousel-wrapper,
+  .blog-carousel-wrapper {
+    left: 0;
+    padding: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .projcontainer,
+  #projecten #cardcontainer,
+  #blog #cardcontainer {
+    gap: 1.5rem;
+  }
+
+  /* --- Cards become fluid instead of fixed rem sizes --- */
+  #projecten #cardcontainer .card,
+  #blog #cardcontainer .card {
+    width: min(26rem, 85vw);
     height: auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    flex-shrink: 0;
   }
 
   #projecten #cardcontainer .card .content,
-  #blog .blog {
+  #blog #cardcontainer .card .content {
     width: 100%;
     height: auto;
   }
 
-  #projecten #cardcontainer .card .content img {
+  #projecten #cardcontainer .card .content .contenttxt,
+  #blog #cardcontainer .card .content .contenttxt {
+    height: auto;
+    grid-template-rows: auto;
+  }
+
+  #projecten #cardcontainer .card .content img,
+  #blog #cardcontainer .card .content img {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  #cardcontainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-self: flex-end;
+    gap: 1.5rem;
+    width: 100vw;
+  }
+
+  /* --- CV section: stack image and text instead of a fixed 2-column grid --- */
+  #cv .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "imgabout"
+      "cv";
+    height: auto;
+    min-height: auto;
+    padding: 3rem 1.5rem;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  #cv .container img {
+    justify-self: center;
+    width: min(300px, 70vw);
+    height: auto;
+  }
+
+  #cv .container .text {
+    justify-self: center;
+    width: min(90vw, 420px);
+    height: auto;
+  }
+
+  #cv .container .text .button .cvlink .btninner {
+    width: min(280px, 85vw);
+    justify-self: center;
+  }
+
+  /* --- Contact / footer section: stop relying on fixed 100vh + negative margins --- */
+  #contact {
+    height: auto;
+    min-height: auto;
+    margin-top: 0;
+    padding: 4rem 1.5rem;
+    box-sizing: border-box;
+  }
+
+  #contact .contact {
+    height: auto;
+    margin-top: 0;
+  }
+
+  #contact .contact .container {
+    grid-template-rows: auto auto auto;
+    row-gap: 2.5rem;
+    height: auto;
+    width: 100%;
+  }
+
+  #contact .contact .container .contactdetails {
+    grid-template-rows: none;
+    gap: 1.5rem;
+    justify-items: center;
+  }
+
+  #contact .contact .container .contactdetails .mail,
+  #contact .contact .container .contactdetails .phone,
+  #contact .contact .container .contactdetails .location {
+    width: min(90vw, 360px);
+  }
+
+  #contact .contact .container .contactdetails .mapslocation {
+    width: min(90vw, 500px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    justify-self: center;
+  }
+
+  #contact .contact .container .contactdetails .mapslocation iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  #contact .contact .container .socials {
+    margin-top: 1rem;
   }
 }
 
@@ -194,45 +413,119 @@
     width: 100%;
   }
 
-  #projecten #cardcontainer {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 10vw;
-    gap: 0;
-    width: auto;
-  }
-
-  #cardcontainer .card {
-    min-width: 50vw;
-    width: 50vw;
-    max-width: 50vw;
-    flex-shrink: 0;
-  }
-
-  #cardcontainer .card .content {
+  /* --- Project & blog wrappers full width, no side padding overflow --- */
+  #projecten .projecten,
+  #blog .blog {
     width: 100%;
+    margin-left: 0;
+    padding: 0 1rem;
   }
 
-  #cardcontainer .card img {
+  .carousel-wrapper,
+  .blog-carousel-wrapper {
+    overflow: visible;
+    padding: 1.5rem 0;
+  }
+
+  /* the fade-out gradient at the edge only makes sense for a horizontal carousel */
+  .carousel-wrapper.has-overflow::after,
+  .blog-carousel-wrapper.has-overflow::after {
+    display: none;
+  }
+
+  /* --- Cards switch from a horizontal carousel to a centered, stacked column --- */
+  #projecten #cardcontainer,
+  #blog #cardcontainer,
+  #cardcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    width: 100%;
+    gap: 1.5rem;
+    /* JS still calculates a translateX for the (now hidden) carousel arrows;
+       force it back to 0 so the stacked cards stay centered */
+    transform: none !important;
+  }
+
+  /* Arrows only make sense for the desktop horizontal carousel */
+  #arrow-right,
+  #arrow-right2 {
+    display: none !important;
+  }
+
+  #projecten #cardcontainer .card,
+  #blog #cardcontainer .card {
+    width: min(90vw, 400px);
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  #projecten #cardcontainer .card .content,
+  #blog #cardcontainer .card .content {
     width: 100%;
     height: auto;
   }
 
-  #arrow-right {
-    right: 15px;
+  #projecten #cardcontainer .card .content .contenttxt,
+  #blog #cardcontainer .card .content .contenttxt {
+    height: auto;
   }
 
+  #projecten #cardcontainer .card .content img,
+  #blog #cardcontainer .card .content img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 1.25rem;
+  }
+
+  #projecten,
   #blog {
-    height: 275vh;
-    justify-items: center;
+    min-height: auto;
+    height: auto;
+    padding: 3rem 0;
   }
-
-  #blog .card {}
 
   #cv .container {
     animation: header-bg-animation2 linear;
     animation-timeline: view();
     animation-range: exit;
+  }
+
+  #cv .container .text .button .cvlink .btninner {
+    width: min(85vw, 300px);
+  }
+
+  /* Contact section: let it grow with its content instead of a fixed 100vh */
+  #contact {
+    height: auto;
+    min-height: auto;
+    margin-top: 0;
+    padding: 3rem 1rem;
+  }
+
+  #contact .contact {
+    height: auto;
+    margin-top: 0;
+  }
+
+  #contact .contact .container .contactdetails .mail,
+  #contact .contact .container .contactdetails .phone,
+  #contact .contact .container .contactdetails .location {
+    width: min(85vw, 320px);
+  }
+
+  #contact .contact .container .contactdetails .mapslocation {
+    width: min(85vw, 380px);
+  }
+
+  #contact .contact .container .socials {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   /* Project detail pages */
@@ -270,65 +563,58 @@
     font-size: 1rem;
   }
 
-  footer {
-    min-height: 200px;
-    height: auto;
-    padding: 3rem 1rem;
-  }
-
-  footer .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
-  #projecten #cardcontainer {
-    display: flex;
-    flex-wrap: nowrap;
-    align-self: flex-end;
-    width: 10vw;
-    gap: 3rem;
-    width: 100vw;
-  }
 
+  #projecten #cardcontainer .card,
+  #blog #cardcontainer .card,
   #cardcontainer .card {
-    min-width: 50vw;
-    width: 50vw;
-    max-width: 50vw;
-    flex-shrink: 0;
+    width: min(88vw, 340px);
+    max-width: 340px;
   }
 
-  #cardcontainer .card .content {
+  #projecten #cardcontainer .card .content,
+  #blog #cardcontainer .card .content {
     width: 100%;
   }
 
-  #cardcontainer .card img {
+  #projecten #cardcontainer .card .content img,
+  #blog #cardcontainer .card .content img {
     width: 100%;
     height: auto;
   }
 
-  .carousel-wrapper {
+  .carousel-wrapper,
+  .blog-carousel-wrapper {
     position: relative;
     justify-self: center;
   }
 
-  #arrow-right {
-    right: 15px;
-  }
-
+  #projecten,
   #blog {
-    height: 275vh;
-    justify-items: center;
+    padding: 2.5rem 0;
   }
 
   .button,
   .btninner {
     width: 100%;
     max-width: 280px;
+  }
+
+  #contact .contact .container .socials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #contact .contact .container .contactdetails .mail,
+  #contact .contact .container .contactdetails .phone,
+  #contact .contact .container .contactdetails .location {
+    width: min(90vw, 280px);
+  }
+
+  #contact .contact .container .contactdetails .mapslocation {
+    width: min(90vw, 320px);
   }
 }
 

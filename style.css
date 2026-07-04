@@ -179,6 +179,7 @@ header {
     animation-timeline: view();
     animation-range: exit -2rem;
 }
+
 header h1 {
     font-size: 6rem;
     font-family: Orbitron, sans-serif;
@@ -474,13 +475,6 @@ PROJECTEN
 
     position: relative;
 
-    mask-image: linear-gradient(to left,
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 1) 50%,
-            rgba(0, 0, 0, 1) 50%,
-            rgba(0, 0, 0, 1) 10%,
-            rgb(0, 0, 0, 1));
-    mask-composite: exclude;
     height: 100vh;
     width: 100%;
 }
@@ -489,9 +483,11 @@ PROJECTEN
 /* */
 
 #projecten .projecten {
-    display: grid;
+    display: flex;
     height: 41.0625rem;
     width: 70.625rem;
+
+    flex-direction: column;
 
     margin-top: 6.62rem;
     margin-left: 7.2rem;
@@ -565,7 +561,6 @@ PROJECTEN
 }
 
 #projecten #arrow-right {
-    position: absolute;
     right: 2rem;
     top: 60%;
     transform: translateY(-50%);

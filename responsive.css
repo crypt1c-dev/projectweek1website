@@ -1,5 +1,20 @@
 /* responsive.css - include AFTER your existing CSS files */
 
+@media (min-width: 2760px) {
+
+  #arrow-right,
+  #arrow-right2 {
+    display: none;
+  }
+}
+
+@media (max-width: 2760px) and (min-width: 1920px) {
+
+  .projcontainer {
+    align-items: flex-top;
+  }
+}
+
 /* Large tablets */
 @media (max-width: 1024px) {
   h1 {

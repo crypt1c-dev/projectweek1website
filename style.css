@@ -453,6 +453,28 @@ Projecten, blog LAYOUT
     animation-range: exit -13rem;
 }
 
+.carousel-wrapper,
+.blog-carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-wrapper.has-overflow::after,
+.blog-carousel-wrapper.has-overflow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to left,
+            rgba(34, 34, 34, 1) 0%,
+            rgba(34, 34, 34, 0.85) 15%,
+            rgba(34, 34, 34, 0) 100%);
+    z-index: 2;
+}
+
 /* 
 PROJECTEN
 */
@@ -474,8 +496,6 @@ PROJECTEN
     padding: 5vw;
 
     position: relative;
-
-    height: 100vh;
     width: 100%;
 }
 
@@ -568,7 +588,7 @@ PROJECTEN
 }
 
 .projcontainer {
-    display: column;
+    display: flex;
     flex-direction: row;
     gap: 7.44rem;
     align-items: center;

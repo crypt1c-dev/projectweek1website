@@ -15,7 +15,13 @@
             <div class="navlogo">
                 <a href="../index.html"><img src="../img/logo.png" alt="Logo Jens V."></a>
             </div>
-            <ul class="navul">
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false"
+                aria-controls="navMenu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <ul class="navul" id="navMenu">
                 <li class="nav1"><a href="../index.html">Home</a></li>
                 <li class="nav1"><a href="../index.html#over-mij">Over mij</a></li>
                 <li class="nav1"><a href="../index.html#projecten">Projecten</a></li>
@@ -24,6 +30,7 @@
                 <li class="nav1"><a href="../index.html#contact">Contact</a></li>
             </ul>
         </div>
+        <div class="nav-overlay" id="navOverlay"></div>
     </nav>
 
     <header>
@@ -42,6 +49,8 @@
             </div>
         </section>
     </header>
+
+    <script src="../nav.js"></script>
 
 </body>
 

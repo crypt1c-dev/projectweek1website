@@ -98,6 +98,10 @@ NAVIGATION
     align-self: center;
 }
 
+.nav-toggle {
+    display: none;
+}
+
 #nav {
     position: relative;
     z-index: 900;
